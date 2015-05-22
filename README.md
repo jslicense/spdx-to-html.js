@@ -13,8 +13,6 @@ Convert an SPDX expression to English text and links.
 -->
 
 ```js
-typeof spdxToHTML; // => 'function'
-
 spdxToHTML('MIT'); // => '<a href="http://spdx.org/licenses/MIT">MIT</a>'
 
 var choiceOfLicenses =
