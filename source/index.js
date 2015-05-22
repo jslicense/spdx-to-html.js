@@ -25,6 +25,10 @@ function render(parsed) {
 }
 
 module.exports = function(expression) {
-  var parsed = spdx.parse(expression);
-  return render(parsed);
+  try {
+    var parsed = spdx.parse(expression);
+    return render(parsed);
+  } catch (e) {
+    return null;
+  }
 };
