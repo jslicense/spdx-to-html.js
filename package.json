@@ -1,0 +1,40 @@
+{
+  "name": "spdx-to-html",
+  "description": "convert an SPDX expression to English text and links",
+  "version": "0.0.0",
+  "author": {
+    "name": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "http://kemitchell.com"
+  },
+  "bugs": {
+    "url": "https://github.com/kemitchell/spdx-to-html.js/issues"
+  },
+  "devDependencies": {
+    "covert": "^1.1.0",
+    "fixpack": "^2.2.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.7.0",
+    "jsmd": "^0.3.0",
+    "tap": "^1.1.0"
+  },
+  "homepage": "https://github.com/kemitchell/spdx-to-html.js",
+  "keywords": [
+    "HTML",
+    "SPDX",
+    "licenses",
+    "metadata"
+  ],
+  "license": "Apache-2.0",
+  "main": "source/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemitchell/spdx-to-html.js.git"
+  },
+  "scripts": {
+    "coverage": "covert -q test/*.test.js",
+    "lint": "fixpack && jshint source test && jscs source test",
+    "precommit": "npm run lint && npm run test && npm run coverage",
+    "test": "jsmd README.md && tap test/*.test.js"
+  }
+}
