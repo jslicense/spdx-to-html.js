@@ -8,7 +8,8 @@ function render(parsed) {
       return (
         '<a href="http://spdx.org/licenses/' + parsed.license + '">' +
           parsed.license +
-        '</a>'
+        '</a>' +
+        (parsed.plus ? ' or newer' : '')
       );
     }
   } else {

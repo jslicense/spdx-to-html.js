@@ -20,8 +20,8 @@ spdxToHTML('MIT'); // => '<a href="http://spdx.org/licenses/MIT">MIT</a>'
 var choiceOfLicenses =
   '<a href="http://spdx.org/licenses/MPL-2.0">MPL-2.0</a>' +
   ' or ' +
-  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>';
-spdxToHTML('(MPL-2.0 OR GPL-2.0)'); // => choiceOfLicenses
+  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a> or newer';
+spdxToHTML('(MPL-2.0 OR GPL-2.0+)'); // => choiceOfLicenses
 
 var seeLICENSE = 'See LICENSE file for license information.';
 spdxToHTML('LicenseRef-LICENSE'); // => seeLICENSE
