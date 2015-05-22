@@ -8,9 +8,17 @@ spdx-to-html
 Convert an SPDX expression to English text and links.
 
 <!-- js
-  var spdxToHtml = require('./');
+  var spdxToHTML = require('./');
 -->
 
 ```js
-typeof spdxToHtml; // => 'function'
+typeof spdxToHTML; // => 'function'
+
+spdxToHTML('MIT'); // => '<a href="http://spdx.org/licenses/MIT">MIT</a>'
+
+var choiceOfLicenses =
+  '<a href="http://spdx.org/licenses/MPL-2.0">MPL-2.0</a>' +
+  ' or ' +
+  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>';
+spdxToHTML('(MPL-2.0 OR GPL-2.0)'); // => choiceOfLicenses
 ```
