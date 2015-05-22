@@ -1,3 +1,7 @@
-module.exports = function() {
-  throw new Error();
+module.exports = function(expression) {
+  return (
+    '<a href="http://spdx.org/licenses/' + expression + '">' +
+    expression +
+    '</a>'
+  );
 };
