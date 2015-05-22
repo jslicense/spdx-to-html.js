@@ -31,4 +31,7 @@ var withException =
   ' or newer' +
   ' with Bison-exception-2.2';
 spdxToHTML('(GPL-2.0+ WITH Bison-exception-2.2)'); // => withException
+
+var unknown = 'The package has a valid, but unknown license identifier.';
+spdxToHTML('DocumentRef-spdx-tool-1.2:LicenseRef-No-Idea'); // => unknown
 ```
