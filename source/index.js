@@ -9,7 +9,8 @@ function render(parsed) {
         '<a href="http://spdx.org/licenses/' + parsed.license + '">' +
           parsed.license +
         '</a>' +
-        (parsed.plus ? ' or newer' : '')
+        (parsed.plus ? ' or newer' : '') +
+        (parsed.exception ? ' with ' + parsed.exception : '')
       );
     }
   } else {

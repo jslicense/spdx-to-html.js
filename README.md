@@ -25,4 +25,10 @@ spdxToHTML('(MPL-2.0 OR GPL-2.0+)'); // => choiceOfLicenses
 
 var seeLICENSE = 'See LICENSE file for license information.';
 spdxToHTML('LicenseRef-LICENSE'); // => seeLICENSE
+
+var withException =
+  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>' +
+  ' or newer' +
+  ' with Bison-exception-2.2';
+spdxToHTML('(GPL-2.0+ WITH Bison-exception-2.2)'); // => withException
 ```
