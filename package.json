@@ -23,8 +23,13 @@
   "keywords": [
     "HTML",
     "SPDX",
-    "licenses",
-    "metadata"
+    "law",
+    "legal",
+    "license",
+    "metadata",
+    "package",
+    "package.json",
+    "standards"
   ],
   "license": "Apache-2.0",
   "main": "source/index.js",
