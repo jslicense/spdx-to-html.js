@@ -36,5 +36,8 @@
     "lint": "fixpack && jshint source test && jscs source test",
     "precommit": "npm run lint && npm run test && npm run coverage",
     "test": "jsmd README.md && tap test/*.test.js"
+  },
+  "dependencies": {
+    "spdx": "^0.4.0"
   }
 }
