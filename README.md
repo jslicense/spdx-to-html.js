@@ -1,37 +1,32 @@
-spdx-to-html
-============
+```javascript
+var spdxToHTML = require('spdx-to-html')
+var assert = require('assert')
 
-[![npm version](https://img.shields.io/npm/v/spdx-to-html.svg)](https://www.npmjs.com/package/spdx-to-html)
-[![license](https://img.shields.io/badge/license-Apache--2.0-303284.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![build status](https://img.shields.io/travis/kemitchell/spdx-to-html.js.svg)](http://travis-ci.org/kemitchell/spdx-to-html.js)
+assert.deepEqual(
+  spdxToHTML('InvalidExpression'),
+  null)
 
-Convert an SPDX expression to English text and links.
+assert.deepEqual(
+  spdxToHTML('MIT'),
+  '<a href="http://spdx.org/licenses/MIT">MIT</a>')
 
-<!-- js
-  // The examples below are run as tests.
-  var spdxToHTML = require('./');
--->
+assert.deepEqual(
+  spdxToHTML('(MPL-2.0 OR GPL-2.0+)'),
+  ( '<a href="http://spdx.org/licenses/MPL-2.0">MPL-2.0</a>' +
+    ' or ' +
+    '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a> or newer' ))
 
-```js
-spdxToHTML('InvalidExpression'); // => null
+assert.deepEqual(
+  spdxToHTML('LicenseRef-LICENSE'),
+  'See LICENSE file for license information.')
 
-spdxToHTML('MIT'); // => '<a href="http://spdx.org/licenses/MIT">MIT</a>'
+assert.deepEqual(
+  spdxToHTML('(GPL-2.0+ WITH Bison-exception-2.2)'),
+  ( '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>' +
+    ' or newer' +
+    ' with Bison-exception-2.2' ))
 
-var choiceOfLicenses =
-  '<a href="http://spdx.org/licenses/MPL-2.0">MPL-2.0</a>' +
-  ' or ' +
-  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a> or newer';
-spdxToHTML('(MPL-2.0 OR GPL-2.0+)'); // => choiceOfLicenses
-
-var seeLICENSE = 'See LICENSE file for license information.';
-spdxToHTML('LicenseRef-LICENSE'); // => seeLICENSE
-
-var withException =
-  '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>' +
-  ' or newer' +
-  ' with Bison-exception-2.2';
-spdxToHTML('(GPL-2.0+ WITH Bison-exception-2.2)'); // => withException
-
-var unknown = 'The package has a valid, but unknown license identifier.';
-spdxToHTML('DocumentRef-spdx-tool-1.2:LicenseRef-No-Idea'); // => unknown
+assert.deepEqual(
+  spdxToHTML('DocumentRef-spdx-tool-1.2:LicenseRef-No-Idea'),
+  'The package has a valid, but unknown license identifier.')
 ```
