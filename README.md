@@ -2,7 +2,7 @@
 var spdxToHTML = require('spdx-to-html')
 ```
 
-Returns null for invalid license expressions.
+Returns null for invalid license expressions:
 
 ```javascript
 var assert = require('assert')
