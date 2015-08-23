@@ -23,8 +23,8 @@ For license references:
 
 ```javascript
 assert.deepEqual(
-  spdxToHTML('LicenseRef-LICENSE'),
-  'License Reference "LicenseRef-LICENSE"')
+  spdxToHTML('LicenseRef-123ABC'),
+  'License Reference "LicenseRef-123ABC"')
 ```
 
 Constructs English disjunctions for multilicensing expressions:
