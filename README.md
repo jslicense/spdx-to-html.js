@@ -11,7 +11,7 @@ assert.deepEqual(
   null)
 ```
 
-Returns a link to a license on spdx.org:
+Returns links for standard licenses on spdx.org:
 
 ```javascript
 assert.deepEqual(
@@ -19,20 +19,12 @@ assert.deepEqual(
   '<a href="http://spdx.org/licenses/MIT">MIT</a>')
 ```
 
-For `LicenseRef`:
+For license references:
 
 ```javascript
 assert.deepEqual(
   spdxToHTML('LicenseRef-LICENSE'),
-  'See the license described by LICENSE.')
-```
-
-Gives up on more complicated references:
-
-```javascript
-assert.deepEqual(
-  spdxToHTML('DocumentRef-spdx-tool-1.2:LicenseRef-No-Idea'),
-  'The package has a valid, but unknown license identifier.')
+  'License Reference "LicenseRef-LICENSE"')
 ```
 
 Constructs English disjunctions for multilicensing expressions:

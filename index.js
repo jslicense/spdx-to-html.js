@@ -2,10 +2,8 @@ var spdx = require('spdx');
 
 function render(parsed) {
   if (parsed.license) {
-    if (parsed.license === 'LicenseRef-LICENSE') {
-      return 'See LICENSE file for license information.';
-    } else if (parsed.license.indexOf('LicenseRef') > -1) {
-      return 'The package has a valid, but unknown license identifier.';
+    if (parsed.license.indexOf('LicenseRef') > -1) {
+      return 'License Reference "' + parsed.license + '"';
     } else {
       return (
         '<a href="http://spdx.org/licenses/' + parsed.license + '">' +
