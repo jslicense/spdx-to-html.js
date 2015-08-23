@@ -39,7 +39,7 @@ assert.deepEqual(
 
 Describes ranges and exceptions:
 
-```javscript
+```javascript
 assert.deepEqual(
   spdxToHTML('(GPL-2.0+ WITH Bison-exception-2.2)'),
   ( '<a href="http://spdx.org/licenses/GPL-2.0">GPL-2.0</a>' +
