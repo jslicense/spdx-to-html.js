@@ -22,7 +22,6 @@
     "standards"
   ],
   "license": "Apache-2.0",
-  "main": "source/index.js",
   "repository": "kemitchell/spdx-to-html.js",
   "scripts": {
     "test": "defence README.md | replace-require-self | node"
