@@ -1,4 +1,4 @@
-var spdx = require('spdx')
+var parse = require('spdx-expression-parse')
 
 function render(parsed) {
   if (parsed.license) {
@@ -19,7 +19,7 @@ function render(parsed) {
 
 module.exports = function(expression) {
   try {
-    var parsed = spdx.parse(expression)
+    var parsed = parse(expression)
     return render(parsed) }
   catch (e) {
     return null } }

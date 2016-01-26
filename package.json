@@ -2,22 +2,14 @@
   "name": "spdx-to-html",
   "description": "convert an SPDX expression to English text and links",
   "version": "0.3.0",
-  "author": {
-    "name": "Kyle E. Mitchell",
-    "email": "kyle@kemitchell.com",
-    "url": "http://kemitchell.com"
-  },
-  "bugs": {
-    "url": "https://github.com/kemitchell/spdx-to-html.js/issues"
-  },
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
-    "spdx": "^0.4.0"
+    "spdx-expression-parse": "^1.0.2"
   },
   "devDependencies": {
     "defence-cli": "^1.0.1",
     "replace-require-self": "^1.0.0"
   },
-  "homepage": "https://github.com/kemitchell/spdx-to-html.js",
   "keywords": [
     "HTML",
     "SPDX",
@@ -31,10 +23,7 @@
   ],
   "license": "Apache-2.0",
   "main": "source/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kemitchell/spdx-to-html.js.git"
-  },
+  "repository": "kemitchell/spdx-to-html.js",
   "scripts": {
     "test": "defence README.md | replace-require-self | node"
   }
