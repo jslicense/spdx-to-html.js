@@ -2,7 +2,7 @@ var parse = require('spdx-expression-parse')
 
 function render (parsed) {
   if (parsed.license) {
-    if (parsed.license.indexOf('LicenseRef') > -1) {
+    if (parsed.license.indexOf('LicenseRef') !== -1) {
       return 'License Reference "' + parsed.license + '"'
     } else {
       return (
@@ -24,8 +24,7 @@ function render (parsed) {
 
 module.exports = function (expression) {
   try {
-    var parsed = spdx.parse(expression)
-    return render(parsed)
+    return render(parse(expression))
   } catch (e) {
     return null
   }
