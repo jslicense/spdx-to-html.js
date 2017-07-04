@@ -24,7 +24,7 @@
     "standards"
   ],
   "license": "Apache-2.0",
-  "repository": "kemitchell/spdx-to-html.js",
+  "repository": "jslicense/spdx-to-html.js",
   "scripts": {
     "test": "defence README.md | replace-require-self | node",
     "lint": "standard && standard-markdown"
