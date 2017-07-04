@@ -6,7 +6,7 @@ function render (parsed) {
       return 'License Reference "' + parsed.license + '"'
     } else {
       return (
-        '<a href="http://spdx.org/licenses/' + parsed.license + '">' +
+        '<a href="http://spdx.org/licenses/' + parsed.license + '.html">' +
           parsed.license +
         '</a>' +
         (parsed.plus ? ' or newer' : '') +
