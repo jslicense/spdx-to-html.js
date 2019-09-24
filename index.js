@@ -21,7 +21,7 @@ function render (parsed) {
       return 'License Reference "' + parsed.license + '"'
     } else {
       return (
-        '<a href="http://spdx.org/licenses/' + parsed.license + '.html">' +
+        '<a href="https://spdx.org/licenses/' + parsed.license + '.html">' +
           parsed.license +
         '</a>' +
         (parsed.plus ? ' or newer' : '') +
