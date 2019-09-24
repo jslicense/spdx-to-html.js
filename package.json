@@ -7,7 +7,7 @@
     "spdx-expression-parse": "^3.0.0"
   },
   "devDependencies": {
-    "defence-cli": "^2.0.1",
+    "defence-cli": "^3.0.1",
     "replace-require-self": "^1.0.0",
     "standard": "^10.0.2",
     "standard-markdown": "^4.0.1"
