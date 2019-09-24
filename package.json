@@ -1,7 +1,7 @@
 {
   "name": "spdx-to-html",
   "description": "convert an SPDX expression to English text and links",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
     "spdx-expression-parse": "^3.0.0"
